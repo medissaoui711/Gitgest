@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "GitGest – GitHub Repo to AI Context",
+  "version": "1.0.0",
+  "description": "Transform any GitHub repo into AI-ready context in 3 seconds. One click → clipboard → paste into ChatGPT/Claude/Ollama.",
+  "homepage_url": "https://github.com/your-handle/gitgest",
+  "permissions": [
+    "clipboardWrite",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://api.github.com/*",
+    "https://github.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*"
+      ],
+      "js": [
+        "content.bundle.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icon-16.png",
+      "48": "assets/icon-48.png",
+      "128": "assets/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/icon-16.png",
+    "48": "assets/icon-48.png",
+    "128": "assets/icon-128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
