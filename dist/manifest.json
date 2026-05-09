@@ -3,7 +3,7 @@
   "name": "GitGest – GitHub Repo to AI Context",
   "version": "1.0.0",
   "description": "Transform any GitHub repo into AI-ready context in 3 seconds. One click → clipboard → paste into ChatGPT/Claude/Ollama.",
-  "homepage_url": "https://github.com/your-handle/gitgest",
+  "homepage_url": "https://github.com/medissaoui711/Gitgest",
   "permissions": [
     "clipboardWrite",
     "storage"
